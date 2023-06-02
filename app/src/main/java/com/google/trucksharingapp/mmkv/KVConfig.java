@@ -1,10 +1,5 @@
 package com.google.trucksharingapp.mmkv;
 
-/**
- * author : demo 🐢
- * e-mail : lancer2ooo@qq.com
- * desc   : hello word
- */
 public interface KVConfig {
 
     void loadConfig();
