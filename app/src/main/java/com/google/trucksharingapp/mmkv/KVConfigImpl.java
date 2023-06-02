@@ -7,11 +7,6 @@ import com.tencent.mmkv.MMKV;
 
 import java.util.Arrays;
 
-/**
- * author : demo 🐢
- * e-mail : lancer2ooo@qq.com
- * desc   : hello word
- */
 public class KVConfigImpl implements KVConfig {
     @SuppressLint("StaticFieldLeak")
     private static volatile KVConfigImpl kvConfigImpl;
@@ -48,14 +43,14 @@ public class KVConfigImpl implements KVConfig {
     @Override
     public void loadConfig() {
         String dirs = this.mContext.getFilesDir().getAbsolutePath() + "/kv";
-        MMKV.initialize(this.mContext, dirs);//初始化mmkv
+        MMKV.initialize(this.mContext, dirs);//Initialize mmkv
         mmkv = MMKV.mmkvWithID("sdkWJSharePreference", MMKV.MULTI_PROCESS_MODE);
     }
 
     @Override
     public void loadConfig(String mmkvName) {
         String dirs = this.mContext.getFilesDir().getAbsolutePath() + "/kv";
-        MMKV.initialize(this.mContext, dirs);//初始化mmkv
+        MMKV.initialize(this.mContext, dirs);//Initialize mmkv
         mmkv = MMKV.mmkvWithID(mmkvName, MMKV.MULTI_PROCESS_MODE);
     }
 
